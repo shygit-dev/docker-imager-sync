@@ -5,7 +5,7 @@ on:
   pull_request:
     branches: [main]
   schedule:
-    - cron: "0 15 * * *"
+    - cron: "16 16 * * *"
 
 env:
   IMAGE_SYNCER_VERSION: v1.3.1
