@@ -1,16 +1,16 @@
 {
   "quay.io/coreos/kube-rbac-proxy": "shihaiyan/kube-rbac-proxy",
   "registry.k8s.io/metrics-server/metrics-server": "shihaiyan/metrics-server",
-  "k8s.gcr.io/ingress-nginx/controller": "shihaiyan/ingress-nginx-controller",
-  "k8s.gcr.io/git-sync/git-sync": "shihaiyan/git-sync",
-  "k8s.gcr.io/kube-state-metrics/kube-state-metrics": "shihaiyan/kube-state-metrics",
-  "k8s.gcr.io/sig-storage/nfs-subdir-external-provisioner": "shihaiyan/nfs-subdir-external-provisioner",
-  "k8s.gcr.io/prometheus-adapter/prometheus-adapter": "shihaiyan/prometheus-adapter",
-  "k8s.gcr.io/kube-apiserver": "shihaiyan/kube-apiserver",
-  "k8s.gcr.io/kube-controller-manager": "shihaiyan/kube-controller-manager",
-  "k8s.gcr.io/kube-scheduler": "shihaiyan/kube-scheduler",
-  "k8s.gcr.io/kube-proxy": "shihaiyan/kube-proxy",
-  "k8s.gcr.io/pause": "shihaiyan/pause",
-  "k8s.gcr.io/etcd": "shihaiyan/etcd",
-  "k8s.gcr.io/coredns/coredns": "shihaiyan/coredns"
+  "registry.k8s.io/ingress-nginx/controller": "shihaiyan/ingress-nginx-controller",
+  "registry.k8s.io/git-sync/git-sync": "shihaiyan/git-sync",
+  "registry.k8s.io/kube-state-metrics/kube-state-metrics": "shihaiyan/kube-state-metrics",
+  "registry.k8s.io/sig-storage/nfs-subdir-external-provisioner": "shihaiyan/nfs-subdir-external-provisioner",
+  "registry.k8s.io/prometheus-adapter/prometheus-adapter": "shihaiyan/prometheus-adapter",
+  "registry.k8s.io/kube-apiserver": "shihaiyan/kube-apiserver",
+  "registry.k8s.io/kube-controller-manager": "shihaiyan/kube-controller-manager",
+  "registry.k8s.io/kube-scheduler": "shihaiyan/kube-scheduler",
+  "registry.k8s.io/kube-proxy": "shihaiyan/kube-proxy",
+  "registry.k8s.io/pause": "shihaiyan/pause",
+  "registry.k8s.io/etcd": "shihaiyan/etcd",
+  "registry.k8s.io/coredns/coredns": "shihaiyan/coredns"
 }
