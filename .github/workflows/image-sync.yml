@@ -9,7 +9,7 @@ on:
 
 env:
   IMAGE_SYNCER_VERSION: v1.3.1
-  DOCKER_NAMESPACE: $GITHUB_REPOSITORY_OWNER
+  DOCKER_NAMESPACE: "shihaiyan"
   DOCKER_REGISTRY: "registry.hub.docker.com"
   USERNAME: ${{ secrets.DOCKER_USERNAME }}
   PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
