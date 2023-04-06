@@ -22,7 +22,7 @@
 1、fork 这个仓库, 创建你自己的docker register 账号密码:
 
 
-操作路径： Settings --》Secrets --》New Repository Secrets --》添加两个变量名称为：<br /> 
+操作路径： Settings --》Secrets --》New Repository Secrets --》添加两个变量名称为<br />（名称必须为下面两个，因为在workflow的yaml文件引用了这两个变量）：
 DOCKER_USERNAME<br />
 DOCKER_PASSWORD<br />
 
@@ -50,7 +50,12 @@ DOCKER_PASSWORD<br />
 }
 ```
 
-3、修改`auth.json`，这里${USERNAME}和${PASSWORD}，修改为你自己的 DockerHub账号密码。<br />
+3、通过`auth.json`可以添加其它仓库认证信息<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这里变量${USERNAME}和${PASSWORD}为DockerHub账号密码，其值在workflows中被赋值:<br />
+（当然也可以直接写明文了，虽然我们不曾这么干！）
+   USERNAME: ${{ secrets.DOCKER_USERNAME }}<br />
+   PASSWORD: ${{ secrets.DOCKER_PASSWORD }}<br />
+   其实就是我们在第一步setting中添加的两个变量！<br />
     这个文件中主要提供镜像仓库的登录验证信息，所以依次可以添加多个镜像仓库！
 
 ```yaml
@@ -62,7 +67,7 @@ DOCKER_PASSWORD<br />
 }
 ```
 
-4、
+
 
 4、检查 action logs
 
@@ -74,34 +79,9 @@ DOCKER_PASSWORD<br />
 
 ![image-20221213102633683](https://img-blog.csdnimg.cn/img_convert/7d01e06938461c646c1354b2bdc3f383.png#pic_center)
 
-# k8s使用镜像
+5、检测同步结果
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;去自己的DockerHub上看看是否有已经同步的镜像
 
-1. 方式一
-
-```
-# 在安装kubernetes集群之前，必须要提前准备好集群需要的镜像，所需镜像可以通过下面命令查看
-[root@master ~]# kubeadm config images list
-
-# 下载镜像
-# 此镜像在kubernetes的仓库中,由于网络原因,无法连接，下面提供了一种替代方案
-images=(
-    kube-apiserver:v1.23.15
-	kube-controller-manager:v1.23.15
-	kube-scheduler:v1.23.15
-	kube-proxy:v1.23.15
-	pause:3.6
-	etcd:3.5.1-0
-	coredns/coredns:v1.8.6
-)
-
-for imageName in ${images[@]} ; do
-	docker pull admin4j/$imageName
-	docker tag admin4j/$imageName 		k8s.gcr.io/$imageName
-	docker rmi admin4j/$imageName
-done
-
-```
-
-2. 方式二
-
-   直接修改 yml 部署文件的 image 属性
+6、补充GitHub的workflow使用
+参考：
+[workflows使用](https://zhuanlan.zhihu.com/p/377731593)
