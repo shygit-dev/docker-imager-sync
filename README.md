@@ -1,9 +1,9 @@
 # docker-image-syncer
 
-    我们在国内部署kubernetes时,第一步安装k8难倒了各大英雄好汉。原因是k8s 各种组件镜像在谷歌服务器上(k8s.gcr.io)，而我们有墙的存在，所以会经常性的下载失败。解决办法是搭梯子，或者是使用其它国内镜像仓库。当然我们也可以自己制作自己的镜像仓库，下面看操作步骤：
+&ensp我们在国内部署kubernetes时,第一步安装k8难倒了各大英雄好汉。原因是k8s 各种组件镜像在谷歌服务器上(k8s.gcr.io)，<br />而我们有墙的存在，所以会经常性的下载失败。解决办法是搭梯子，或者是使用其它国内镜像仓库。当然我们也可以自己制作自己的镜像仓库，下面看操作步骤：
 
 # 同步原理
-    本仓库使用阿里开源的镜像同步工具（[aliyun image-syncer](https://github.com/AliyunContainerService/image-syncer)），同时结合GitHub的Action功能，来同步k8s组件镜像(k8s.gcr.io)  到 DockerHub上自己的账号中去或自己的搭建的私服harbor中去，这样后期安装k8s就可以将镜像源仓库，改为自己的DockerHub地址了或自己的私服地址。
+&ensp本仓库使用阿里开源的镜像同步工具（[aliyun image-syncer](https://github.com/AliyunContainerService/image-syncer)），<br />同时结合GitHub的Action功能，来同步k8s组件镜像(k8s.gcr.io)  到 DockerHub上自己的账号中去或自己的搭建的私服harbor中去，这样后期安装k8s就可以将镜像源仓库，改为自己的DockerHub地址了或自己的私服地址。
     
     
 # docker-image-syncer 运行原理
@@ -22,9 +22,9 @@
 1、fork 这个仓库, 创建你自己的docker register 账号密码:
 
 
-操作路径： Settings --》Secrets --》New Repository Secrets --》添加两个变量名称为： 
-DOCKER_USERNAME
-DOCKER_PASSWORD
+操作路径： Settings --》Secrets --》New Repository Secrets --》添加两个变量名称为：<br /> 
+DOCKER_USERNAME<br />
+DOCKER_PASSWORD<br />
 
 ![image-20221213102110118](https://img-blog.csdnimg.cn/img_convert/de478aaf77041569c82f17cd34834926.png#pic_center)
 
@@ -50,7 +50,7 @@ DOCKER_PASSWORD
 }
 ```
 
-3、修改`auth.json`，这里${USERNAME}和${PASSWORD}，修改为你自己的 DockerHub账号密码。
+3、修改`auth.json`，这里${USERNAME}和${PASSWORD}，修改为你自己的 DockerHub账号密码。<br />
     这个文件中主要提供镜像仓库的登录验证信息，所以依次可以添加多个镜像仓库！
 
 ```yaml
