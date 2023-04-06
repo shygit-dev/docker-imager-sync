@@ -1,9 +1,9 @@
 # docker-image-syncer
 
-&ensp我们在国内部署kubernetes时,第一步安装k8难倒了各大英雄好汉。原因是k8s 各种组件镜像在谷歌服务器上(k8s.gcr.io)，<br />而我们有墙的存在，所以会经常性的下载失败。解决办法是搭梯子，或者是使用其它国内镜像仓库。当然我们也可以自己制作自己的镜像仓库，下面看操作步骤：
+&nbsp我们在国内部署kubernetes时,第一步安装k8难倒了各大英雄好汉。原因是k8s 各种组件镜像在谷歌服务器上(k8s.gcr.io)，<br />而我们有墙的存在，所以会经常性的下载失败。解决办法是搭梯子，或者是使用其它国内镜像仓库。当然我们也可以自己制作自己的镜像仓库，下面看操作步骤：
 
 # 同步原理
-&ensp本仓库使用阿里开源的镜像同步工具（[aliyun image-syncer](https://github.com/AliyunContainerService/image-syncer)），<br />同时结合GitHub的Action功能，来同步k8s组件镜像(k8s.gcr.io)  到 DockerHub上自己的账号中去或自己的搭建的私服harbor中去，这样后期安装k8s就可以将镜像源仓库，改为自己的DockerHub地址了或自己的私服地址。
+&nbsp本仓库使用阿里开源的镜像同步工具（[aliyun image-syncer](https://github.com/AliyunContainerService/image-syncer)），<br />同时结合GitHub的Action功能，来同步k8s组件镜像(k8s.gcr.io)  到 DockerHub上自己的账号中去或自己的搭建的私服harbor中去，这样后期安装k8s就可以将镜像源仓库，改为自己的DockerHub地址了或自己的私服地址。
     
     
 # docker-image-syncer 运行原理
