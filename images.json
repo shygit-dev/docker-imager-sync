@@ -1,4 +1,4 @@
 {
   "quay.io/coreos/kube-rbac-proxy": "shihaiyan/kube-rbac-proxy",
-  "registry.k8s.io/metrics-server/metrics-server": "shihaiyan/metrics-server"
+  "registry.k8s.io/metrics-server/metrics-server:latest": "shihaiyan/metrics-server"
 }
