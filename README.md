@@ -22,7 +22,7 @@
 1、fork 这个仓库, 创建你自己的docker register 账号密码:
 
 
-操作路径： Settings --》Secrets --》New Repository Secrets --》添加两个变量名称为<br />（名称必须为下面两个，因为在workflow的yaml文件引用了这两个变量）：
+操作路径： Settings --》Secrets --》New Repository Secrets --》添加两个变量名称为<br />（名称必须为下面两个，因为在workflow的yaml文件引用了这两个变量）：<br />
 DOCKER_USERNAME<br />
 DOCKER_PASSWORD<br />
 
