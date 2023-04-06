@@ -52,7 +52,7 @@ DOCKER_PASSWORD<br />
 
 3、通过`auth.json`可以添加其它仓库认证信息<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这里变量${USERNAME}和${PASSWORD}为DockerHub账号密码，其值在workflows中被赋值:<br />
-（当然也可以直接写明文了，虽然我们不曾这么干！）
+（当然也可以直接写明文了，虽然我们不曾这么干！）<br />
    USERNAME: ${{ secrets.DOCKER_USERNAME }}<br />
    PASSWORD: ${{ secrets.DOCKER_PASSWORD }}<br />
    其实就是我们在第一步setting中添加的两个变量！<br />
