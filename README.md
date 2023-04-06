@@ -79,9 +79,9 @@ DOCKER_PASSWORD<br />
 
 ![image-20221213102633683](https://img-blog.csdnimg.cn/img_convert/7d01e06938461c646c1354b2bdc3f383.png#pic_center)
 
-5、检测同步结果
+# 检测同步结果
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;去自己的DockerHub上看看是否有已经同步的镜像
 
-6、补充GitHub的workflow使用
+# 补充GitHub的workflow使用
 参考：
 [workflows使用](https://zhuanlan.zhihu.com/p/377731593)
